@@ -3,52 +3,62 @@
 $(document).ready(function() {
 	var start;
 	var end;
+	var vowel;
 
-
-
-
-	// start = Date.getTime();
-	// var now = new Date ()
-	var start = Date.now();
+	// time spent on page
+	start = Date.now();
 	$(window).on('beforeunload',function(event) {
-		// var end = Date.getTime();
-		// var end = new Date ();
-		var end = Date.now();
-	console.log((end - start) / 1000);
+		end = Date.now();
+		console.log("User spent " + (end - start) / 1000 + "seconds");
 	});
+
+	// percentage the user viewed
+	var windowHeight = $(window).height();
+	var documentHeight = $(document).height();
+	var scrollTop = $(window).scrollTop();
+	var totalLength = documentHeight - windowHeight;
+	var percentageScrolled = Math.floor(scrollTop/totalLength * 100)
+	console.log(percentageScrolled + '% viewed')
+
+	//time spent hovering over each element
+	//first pug image
+	$('.pug-image1').mouseover(function() {
+		start  = Date.now();
+	});
+	$('.pug-image1').mouseleave(function() {
+		end = Date.now();
+		console.log((end - start) / 100);
+	});
+	//first paragraph
+
+	//second pug picture
+
+	//first link
+
+
+	//second paragraph
+
+
+	//second link
+
+	//third pug picture
+
+
+	//input field
+	// how many vowels typed in input
+	$('.input').keyup(function(){
+		var x = $('.input').val();
+		if (x === 'a' || x === 'e' || x === 'i' || x === 'o' || x === 'u') {
+			vowel = x;
+			console.log(vowel)
+	}
+	});
+
+	// which link did they click
+	$('link').click(function(){
+		console.log($('link').val());
+	})
 });
-
-// percentage the user viewed
-// 1) find the height of the page
-var windowHeight = $(window).height();
-var documentHeight = $(document).height();
-var scrollTop = $(window).scrollTop();
-var totalLength = documentHeight - windowHeight;
-var percentageScrolled = Math.floor(scrollTop/totalLength * 100)
-console.log(percentageScrolled + '% viewed')
-
-//time spent hovering over each element
-$('.pug-image1').mouseover(function() {
-	start  = Date.now();
-});
-
-$('.pug-image1').mouseleave(function() {
-	end = Date.now();
-	console.log((end - start) / 100);
-});
-
-
-// how many vowels typed in input
-var vowels = function() {
-	if($('.input').val() )
-	var sss = $('.input').val()
-	if()
-console.log(sss);
-
-};
-
-
-
 
 // var finalReport = $(window).on('beforeunload', function(event){
 // 	return 
