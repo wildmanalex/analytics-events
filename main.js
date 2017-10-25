@@ -1,5 +1,3 @@
-// total time spent on page
-
 $(document).ready(function() {
 	var start;
 	var end;
@@ -31,7 +29,7 @@ $(document).ready(function() {
 	});
 	$('.pug-image1').mouseleave(function() {
 		end = Date.now();
-		hovering += ("User spent " + ((end - start) / 100) + " seconds on the first pug image");
+		hovering += (" User spent " + ((end - start) / 100) + " seconds on the first pug image");
 	});
 	//first paragraph
 	$('.paragraph1').mouseover(function() {
@@ -39,7 +37,7 @@ $(document).ready(function() {
 	});
 	$('.paragraph1').mouseleave(function() {
 		end = Date.now();
-		hovering += ("User spent " + ((end - start) / 100) + " seconds on the first paragraph");
+		hovering += (" User spent " + ((end - start) / 100) + " seconds on the first paragraph");
 	});
 	//second pug picture
 	$('.pug-image2').mouseover(function() {
@@ -47,7 +45,7 @@ $(document).ready(function() {
 	});
 	$('.pug-image2').mouseleave(function() {
 		end = Date.now();
-		hovering += ("User spent " + ((end - start) / 100) + " seconds on the second pug image");
+		hovering += (" User spent " + ((end - start) / 100) + " seconds on the second pug image");
 	});
 	//first link
 	$('.link1').mouseover(function() {
@@ -55,7 +53,7 @@ $(document).ready(function() {
 	});
 	$('.link1').mouseleave(function() {
 		end = Date.now();
-		hovering += ("User spent " + ((end - start) / 100) + " seconds on the first link");
+		hovering += (" User spent " + ((end - start) / 100) + " seconds on the first link");
 	});
 	//second paragraph
 	$('.paragraph2').mouseover(function() {
@@ -63,7 +61,7 @@ $(document).ready(function() {
 	});
 	$('.paragraph2').mouseleave(function() {
 		end = Date.now();
-		hovering += ("User spent " + ((end - start) / 100) + " seconds on the second paragraph");
+		hovering += (" User spent " + ((end - start) / 100) + " seconds on the second paragraph");
 	});
 
 	//second link
@@ -72,7 +70,7 @@ $(document).ready(function() {
 	});
 	$('.link2').mouseleave(function() {
 		end = Date.now();
-		hovering += ("User spent " + ((end - start) / 100) + " seconds on the second link");
+		hovering += (" User spent " + ((end - start) / 100) + " seconds on the second link");
 	});
 	//third pug picture
 	$('.pug-image3').mouseover(function() {
@@ -80,7 +78,7 @@ $(document).ready(function() {
 	});
 	$('.pug-image3').mouseleave(function() {
 		end = Date.now();
-		hovering += ("User spent " + ((end - start) / 100) + " seconds on the third pug image");
+		hovering += (" User spent " + ((end - start) / 100) + " seconds on the third pug image");
 	});
 
 	//input field
@@ -89,7 +87,7 @@ $(document).ready(function() {
 	});
 	$('.input').mouseleave(function() {
 		end = Date.now();
-		hovering += ("User spent " + ((end - start) / 100) + " seconds on the input field");
+		hovering += (" User spent " + ((end - start) / 100) + " seconds on the input field");
 	});
 	// how many vowels typed in input
 	$(document).keydown(function(event){
@@ -115,12 +113,9 @@ $(document).ready(function() {
 	})
 });
 
-//          Needs to return
-//         1) total time spent on page
-//         2) what percentage of the page they viewed ( how far they scrolled down)
-//         3) time spent hovering over each element on the page
-//         4) how many vowels they typed in the input
-//         5) if they left page by clicking a link, record which link
-
-// 		time-spent on page - take date method from page load and subtract from leaving page and do the math
-//         scroll-top - find what percentage of the page they viewed
+// Needs to return
+// 1) total time spent on page
+// 2) what percentage of the page they viewed ( how far they scrolled down)
+// 3) time spent hovering over each element on the page
+// 4) how many vowels they typed in the input
+// 5) if they left page by clicking a link, record which link
